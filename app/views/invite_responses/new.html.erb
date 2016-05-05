@@ -1,36 +1,42 @@
-<h1>RSVP</h1>
 <%= form_for :invite_response do |f| %>
-    <p>
-      <%= f.label :Name %><br>
-      <%= f.text_field :name %>
-    </p>
+<table id="rsvp_table">
+    <td id="col1" width="30%">
+    <h1>RSVP</h1>
+        <p>
+          <%= f.label :Name %><br>
+          <%= f.text_field :name %>
+        </p>
 
-    <p>
-      <%= f.label :Address %><br>
-      <%= f.text_area :address %>
-    </p>
+        <p>
+          <%= f.label :Address %><br>
+          <%= f.text_area :address %>
+        </p>
 
-    <p>
-      <%= radio_button_tag(:age, "just_me") %>
-      <%= label_tag(:age_child, "Just me!") %>
-      <br/>
-      <%= radio_button_tag(:age, "plus_one") %>
-          <td><%= label_tag(:age_adult, "Add dis person ->") %></td>
-          <td><%= f.text_field(:name_plus_one,:placeholder => 'Name of ma +1') %></td>
-    </p>
+          <%= radio_button_tag(:age, "just_me") %>
+          <%= label_tag(:age_child, "Just me!") %>
+          <br/>
+        <table>
+              <td><%= radio_button_tag(:age, "plus_one") %>  <%= label_tag(:age_adult, "Add dis person ->") %></td>
+              <td><%= f.text_field(:name_plus_one,:placeholder => 'Name of ma +1') %></td>
+        </table>
 
-    <p>
-      <%= check_box_tag(:need_hotel) %>
-      <%= label_tag(:need_hotel, "Put me in a hotel or mancave!") %>
-    </p>
+        <p>
+          <%= check_box_tag(:need_hotel) %>
+          <%= label_tag(:need_hotel, "Put me in a hotel or mancave!") %>
+        </p>
 
-    <p>
-      <%= f.label 'Other Details (dietary, etc.)' %><br>
-      <%= f.text_area :address %>
-    </p>
+        <p>
+          <%= f.label 'Other Details (dietary, etc.)' %><br>
+          <%= f.text_area :address %>
+        </p>
 
-    <p>
-      <%= f.submit %>
-    </p>
+        <p>
+          <%= f.submit %>
+        </p>
 
+        </td>
+    <td id="col2" width="70%">
+
+    </td>
+</table>
 <% end %>

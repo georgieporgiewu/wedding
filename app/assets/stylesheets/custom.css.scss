@@ -8,6 +8,21 @@ body {
   padding:40px;
 }
 
+#rsvp_table {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+
+}
+
+#col2 {
+  background-image: image-url('IMG_9105_small.jpg');
+  background-size: 110%;
+}
+
+#col1 {
+  padding-top: 60px;
+  padding:40px;
+}
+
 section {
   overflow: auto;
 }
