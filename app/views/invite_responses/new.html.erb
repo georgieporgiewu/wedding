@@ -1,16 +1,36 @@
 <h1>RSVP</h1>
 <%= form_for :invite_response do |f| %>
     <p>
-      <%= f.label :RSVP %><br>
-      <%= f.text_field :title %>
+      <%= f.label :Name %><br>
+      <%= f.text_field :name %>
     </p>
 
     <p>
-      <%= f.label :text %><br>
-      <%= f.text_area :text %>
+      <%= f.label :Address %><br>
+      <%= f.text_area :address %>
+    </p>
+
+    <p>
+      <%= radio_button_tag(:age, "just_me") %>
+      <%= label_tag(:age_child, "Just me!") %>
+      <br/>
+      <%= radio_button_tag(:age, "plus_one") %>
+          <td><%= label_tag(:age_adult, "Add dis person ->") %></td>
+          <td><%= f.text_field(:name_plus_one,:placeholder => 'Name of ma +1') %></td>
+    </p>
+
+    <p>
+      <%= check_box_tag(:need_hotel) %>
+      <%= label_tag(:need_hotel, "Put me in a hotel or mancave!") %>
+    </p>
+
+    <p>
+      <%= f.label 'Other Details (dietary, etc.)' %><br>
+      <%= f.text_area :address %>
     </p>
 
     <p>
       <%= f.submit %>
     </p>
+
 <% end %>

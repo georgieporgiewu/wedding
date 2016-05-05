@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+//Then, remove all the *= require_self and *= require_tree . statements from the sass file. Instead, use @import to import Sass files.
+//
+//Do not use *= require in Sass or your other stylesheets will not be able to access the Bootstrap mixins or variables.
